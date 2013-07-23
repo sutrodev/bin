@@ -1,9 +1,11 @@
 #!/bin/sh
 
 export TERM="xterm-256color"
-tmux new-session -d -s foomux
-tmux rename-window 'chaos'
-tmux select-window -t foomux:1
+SESSION_NAME=$1
+WINDOW_1_NAME=$2
+tmux new-session -d -s $SESSION_NAME
+tmux rename-window $WINDOW_1_NAME
+tmux select-window -t $SESSION_NAME:1
 tmux split-window -h
 tmux select-pane -l
-tmux -2 attach-session -t foomux
+tmux -2 attach-session -t $SESSION_NAME
