@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# Need to update this soon.
 export TERM="xterm-256color"
 SESSION_NAME=$1
 WINDOW_1_NAME=$2
